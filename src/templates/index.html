@@ -7,7 +7,9 @@
 </head>
 <body>
     <h3>Hello
-        {% if my_name%}
+        {% if my_name == "George" %}
+            friend!
+        {% elif my_name%}
             {{my_name}}!
         {% else %}
             Guest!
