@@ -6,6 +6,12 @@
     <title>Flask Blog</title>
 </head>
 <body>
-    <h3>Hello {{my_name}}</h3>
+    <h3>Hello
+        {% if my_name%}
+            {{my_name}}!
+        {% else %}
+            Guest!
+        {% endif %}
+    </h3>
 </body>
 </html>
