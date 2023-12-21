@@ -31,7 +31,15 @@ def hello2(name):
 
 @app.route('/hello3/<int:id>')
 def hello3(id):
-    return f"My id is: {id}!"
+    return f"Your id is: {id}!"
+
+@app.route('/hello4')
+@app.route('/hello4/<int:id>')
+def hello4(id = None):
+    if id == None:
+        return f"Id doesn't exist!"
+    else:
+        return f"Your id is: {id}!"
 
 if __name__ == "__main__":
     app.run(debug=True) # False when our app has been uploaded to production server.
