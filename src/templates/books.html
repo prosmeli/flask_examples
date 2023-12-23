@@ -13,7 +13,7 @@
         <li>
             Title: {{book.title}} <br>
             Author: {{book.author}} <br>
-            Genre: {{book.genre}} <br>
+            Genre: {{book.genre | safe}} <br>
         </li> <br>
         {% endif %}
 
