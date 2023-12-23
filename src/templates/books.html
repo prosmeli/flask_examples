@@ -8,11 +8,15 @@
 <body>
     <ul>
     {% for book in my_data%}
-     <li>
-        Title: {{book.title}} <br>
-        Author: {{book.author}} <br>
-        Genre: {{book.genre}}
-     </li>
+
+        {% if book.author == "George Orwell"%}
+        <li>
+            Title: {{book.title}} <br>
+            Author: {{book.author}} <br>
+            Genre: {{book.genre}} <br>
+        </li> <br>
+        {% endif %}
+
     {% endfor %}
     </ul>
 </body>
