@@ -11,7 +11,7 @@
 
         {% if book.author == "George Orwell"%}
         <li>
-            Title: {{book.title}} <br>
+            Title: {{book.title | title}} <br>
             Author: {{book.author}} <br>
             Genre: {{book.genre | safe}} <br>
         </li> <br>
