@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
-</head>
-<body>
-    <ul>
+{% extends "base.html" %}
+
+{% block title %}
+    Books
+{% endblock title%}
+
+{% block content %}
+<ul>
     {% for book in my_data%}
 
         {% if book.author == "George Orwell"%}
@@ -19,6 +17,5 @@
         {% endif %}
 
     {% endfor %}
-    </ul>
-</body>
-</html>
+</ul>
+{% endblock content%}
