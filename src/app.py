@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, request
 import json
 
 app = Flask(__name__)
@@ -10,6 +10,12 @@ def root():
 
 @app.route('/signup/', methods=["GET", "POST"])
 def signup():
+    if request.method == 'POST':
+        username = request.form['username']
+        email = request.form['email']
+        password = request.form['password']
+        password2 = request.form['password2']
+        print(username, email, password, password2)
     return render_template("signup.html")
 
 @app.route('/login/')
